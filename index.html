@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#10172d">
+  <meta name="description" content="Knowvia makes it easy to explore topics, challenge yourself, and learn as you go.">
+  <title>Knowvia — Online Quiz</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="ambient ambient-one"></div><div class="ambient ambient-two"></div>
+  <header class="site-header">
+    <a class="logo" href="#" aria-label="Knowvia home"><span class="logo-mark">K<span>.</span></span><span>knowvia</span></a>
+    <div class="header-right"><span class="live-dot"></span><span>LEARN SOMETHING NEW</span></div>
+  </header>
+
+  <main class="shell">
+    <!-- SCREEN 1: Welcome -->
+    <section id="screen-welcome" class="screen welcome-screen active">
+      <div class="welcome-copy">
+        <div class="pill"><span class="sparkle">✦</span> YOUR KNOWLEDGE, YOUR MOMENT</div>
+        <h1>Make every<br>answer <span>count.</span></h1>
+        <p class="lead">A little curiosity can take you a long way. Choose a topic, challenge yourself, and discover what you know.</p>
+        <div class="welcome-points">
+          <div><span class="point-icon">◷</span><span>Quick challenges</span></div>
+          <div><span class="point-icon">✧</span><span>Instant results</span></div>
+          <div><span class="point-icon">↗</span><span>Track your progress</span></div>
+        </div>
+        <button class="btn btn-primary btn-wide" id="welcome-start">Get started <span>→</span></button>
+        <p class="micro-copy">No account needed · Free to practice</p>
+      </div>
+      <div class="welcome-art" aria-hidden="true">
+        <div class="orbit orbit-a"></div><div class="orbit orbit-b"></div>
+        <div class="float-card float-top"><span class="mini-icon purple">✦</span><div><b>Stay curious</b><small>One question at a time</small></div></div>
+        <div class="quiz-illustration">
+          <div class="illustration-top"><span></span><span></span><span></span><b>QUIZ TIME</b></div>
+          <div class="illustration-title">Ready to<br>challenge yourself?</div>
+          <div class="fake-option chosen"><i>✓</i><span>Absolutely!</span></div>
+          <div class="fake-option"><i>B</i><span>Maybe later</span></div>
+          <div class="fake-option"><i>C</i><span>Let me think</span></div>
+          <div class="illustration-footer"><span>YOUR NEXT BIG WIN</span><strong>01 / 10</strong></div>
+        </div>
+        <div class="float-card float-bottom"><span class="mini-icon green">↗</span><div><b>Keep growing</b><small>Every try makes progress</small></div></div>
+        <div class="star star-one">✳</div><div class="star star-two">✦</div>
+      </div>
+    </section>
+
+    <!-- SCREEN 2: Setup and category -->
+    <section id="screen-setup" class="screen">
+      <div class="section-heading">
+        <div><div class="step-label">01 — MAKE IT YOURS</div><h2>Set up your <em>challenge.</em></h2><p>Tell us what to call you and pick a topic to begin.</p></div>
+        <div class="step-count">01 <span>/ 04</span></div>
+      </div>
+      <div class="setup-grid">
+        <div class="panel name-panel">
+          <label for="player-name">YOUR NAME <span>OPTIONAL</span></label>
+          <input id="player-name" type="text" maxlength="28" placeholder="e.g. Alex Morgan">
+          <div class="input-hint">Your name will appear on your result card.</div>
+          <div class="setup-note"><span class="note-icon">✦</span><div><b>Make it a personal best.</b><p>Take your time, trust what you know, and enjoy the challenge.</p></div></div>
+        </div>
+        <div class="panel category-panel">
+          <div class="panel-title"><div><b>CHOOSE YOUR CATEGORY</b><small>Select one subject for this round.</small></div><span class="required-tag">REQUIRED</span></div>
+          <div class="category-list">
+            <button class="category selected" data-category="Computer Science"><span class="category-icon violet">⌘</span><span><b>Computer Science</b><small>Technology, web & computers</small></span><i>✓</i></button>
+            <button class="category" data-category="General Knowledge"><span class="category-icon orange">✧</span><span><b>General Knowledge</b><small>Everyday facts & discoveries</small></span><i>✓</i></button>
+            <button class="category" data-category="Mathematics"><span class="category-icon blue">＋</span><span><b>Mathematics</b><small>Numbers, logic & calculations</small></span><i>✓</i></button>
+            <button class="category" data-category="Science"><span class="category-icon green">⚛</span><span><b>Science</b><small>Explore the natural world</small></span><i>✓</i></button>
+          </div>
+        </div>
+      </div>
+      <div class="screen-actions"><button class="btn btn-ghost" data-back="welcome">← Back</button><button class="btn btn-primary" id="setup-continue">Continue <span>→</span></button></div>
+    </section>
+
+    <!-- SCREEN 3: Instructions -->
+    <section id="screen-instructions" class="screen">
+      <div class="section-heading">
+        <div><div class="step-label">02 — BEFORE YOU BEGIN</div><h2>Know the <em>rules.</em></h2><p>A quick look at how your quiz round works.</p></div>
+        <div class="step-count">02 <span>/ 04</span></div>
+      </div>
+      <div class="instruction-layout">
+        <div class="instruction-main panel">
+          <div class="instruction-badge">✦ YOUR QUIZ BRIEFING</div>
+          <h3>Simple rules.<br><span>Big brain energy.</span></h3>
+          <p class="instruction-desc">Stay focused and answer each question to the best of your ability. You can move back and change an answer before submitting.</p>
+          <div class="rule-list">
+            <div><span class="rule-number">01</span><div><b>10 questions</b><small>One question appears at a time.</small></div></div>
+            <div><span class="rule-number">02</span><div><b>15 minutes</b><small>The countdown starts when you begin.</small></div></div>
+            <div><span class="rule-number">03</span><div><b>One best answer</b><small>Choose one option for every question.</small></div></div>
+            <div><span class="rule-number">04</span><div><b>Instant score</b><small>See your result and review answers at the end.</small></div></div>
+          </div>
+        </div>
+        <aside class="ready-card">
+          <div class="ready-icon">◎</div><span class="step-label">YOUR ROUND</span>
+          <h3 id="brief-category">Computer Science</h3>
+          <div class="ready-stat"><span>Questions</span><b>10</b></div>
+          <div class="ready-stat"><span>Time limit</span><b>15 min</b></div>
+          <div class="ready-stat"><span>Format</span><b>Multiple choice</b></div>
+          <div class="ready-tip">✦ <span>Tip: Read each question carefully. There is no penalty for a wrong answer.</span></div>
+        </aside>
+      </div>
+      <div class="screen-actions"><button class="btn btn-ghost" data-back="setup">← Back</button><button class="btn btn-primary" id="begin-quiz">I'm ready — start quiz <span>→</span></button></div>
+    </section>
+
+    <!-- SCREEN 4: Quiz -->
+    <section id="screen-quiz" class="screen">
+      <div class="quiz-topline"><div><div class="step-label">03 — YOUR CHALLENGE</div><h2 id="quiz-category-title">Computer Science</h2></div><div class="timer"><span class="timer-dot"></span><div><small>TIME REMAINING</small><b id="timer">15:00</b></div></div></div>
+      <div class="quiz-progress"><div class="progress-meta"><span id="question-counter">QUESTION 01 <i>OF 10</i></span><span id="progress-label">10% completed</span></div><div class="progress-track"><div id="progress-bar"></div></div></div>
+      <div class="quiz-content">
+        <div class="question-side"><div class="question-kicker">THINK IT THROUGH <span>✦</span></div><h3 id="question-text">Question goes here?</h3><p>Select the option you think is correct.</p></div>
+        <div class="answers-side"><div id="options-container" class="options"></div><div class="answer-footnote">Choose one answer to continue.</div></div>
+      </div>
+      <div class="quiz-bottom"><button class="btn btn-ghost" id="prev-btn">← Previous</button><div class="answered-count" id="answered-count">0 of 10 answered</div><button class="btn btn-primary" id="next-btn">Next question →</button><button class="btn btn-primary hidden" id="submit-btn">Finish quiz ✓</button></div>
+      <p id="quiz-feedback" class="quiz-feedback" role="status" aria-live="polite"></p>
+    </section>
+
+    <!-- SCREEN 5: Results and review -->
+    <section id="screen-results" class="screen">
+      <div class="results-heading"><div class="result-confetti">✳</div><div class="step-label">04 — ROUND COMPLETE</div><h2 id="result-title">You did it!</h2><p id="result-message">Every question is a chance to learn something new.</p></div>
+      <div class="results-grid">
+        <div class="score-panel panel"><span class="score-caption">YOUR FINAL SCORE</span><div class="score-ring"><div><strong id="score">0</strong><small>/ 10</small></div></div><h3 id="score-label">Keep learning!</h3><p id="score-subtitle">Your next attempt can be even better.</p></div>
+        <div class="stats-panel panel"><div class="stats-title">YOUR PERFORMANCE <span>✦</span></div><div class="stat-line"><span><i class="stat-dot green-dot"></i>Correct answers</span><b id="correct-count">0</b></div><div class="stat-line"><span><i class="stat-dot red-dot"></i>Incorrect answers</span><b id="wrong-count">0</b></div><div class="stat-line"><span><i class="stat-dot purple-dot"></i>Unanswered</span><b id="unanswered-count">0</b></div><div class="stat-line"><span><i class="stat-dot purple-dot"></i>Final percentage</span><b id="percentage">0%</b></div><div class="result-message-box" id="result-category">Category: Computer Science</div></div>
+      </div>
+      <div class="review-panel panel"><div class="review-heading"><div><b>Answer review</b><small>See which answers you got right.</small></div><button id="review-toggle" class="text-button">Show answers ↓</button></div><div id="review-container" class="review-container hidden"></div></div>
+      <div class="results-actions"><button class="btn btn-ghost" id="change-category">Choose another category</button><button class="btn btn-primary" id="restart-btn">Try again ↻</button></div>
+    </section>
+  </main>
+  <footer class="site-footer"><span>© 2026 KNOWVIA</span><span>BUILT FOR CURIOUS MINDS <b>✦</b></span></footer>
+</body>
+</html>
